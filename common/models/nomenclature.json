@@ -1,0 +1,105 @@
+{
+  "name": "nomenclature",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "ntype": {
+      "type": "string",
+      "required": true
+    },
+    "hybrid": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "genus": {
+      "type": "string"
+    },
+    "species": {
+      "type": "string"
+    },
+    "subsp": {
+      "type": "string"
+    },
+    "var": {
+      "type": "string"
+    },
+    "subvar": {
+      "type": "string"
+    },
+    "forma": {
+      "type": "string"
+    },
+    "nothosubsp": {
+      "type": "string"
+    },
+    "nothoforma": {
+      "type": "string"
+    },
+    "authors": {
+      "type": "string"
+    },
+    "genus_h": {
+      "type": "string"
+    },
+    "species_h": {
+      "type": "string"
+    },
+    "subsp_h": {
+      "type": "string"
+    },
+    "var_h": {
+      "type": "string"
+    },
+    "subvar_h": {
+      "type": "string"
+    },
+    "forma_h": {
+      "type": "string"
+    },
+    "nothosubsp_h": {
+      "type": "string"
+    },
+    "nothoforma_h": {
+      "type": "string"
+    },
+    "authors_h": {
+      "type": "string"
+    },
+    "publication": {
+      "type": "string"
+    },
+    "tribus": {
+      "type": "string"
+    },
+    "vernacular": {
+      "type": "string"
+    },
+    "ntype_order": {
+      "type": "number"
+    },
+    "syn_type": {
+      "type": "number"
+    },
+    "is_isonym": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "is_basionzm": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,32 @@
+{
+  "name": "nomen_status",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "allochthonous": {
+      "type": "string"
+    },
+    "invasiveness": {
+      "type": "string"
+    },
+    "cultivation": {
+      "type": "string"
+    },
+    "protection": {
+      "type": "string"
+    },
+    "endemism": {
+      "type": "string"
+    },
+    "doubtfullness": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,32 @@
+{
+  "name": "record_info",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "inserted_by": {
+      "type": "string"
+    },
+    "inserted_date": {
+      "type": "date"
+    },
+    "checked_by": {
+      "type": "string"
+    },
+    "checked_date": {
+      "type": "date"
+    },
+    "reviewed_by": {
+      "type": "string"
+    },
+    "reviewed_date": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

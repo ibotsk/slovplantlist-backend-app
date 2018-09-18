@@ -1,0 +1,27 @@
+{
+  "name": "synonym",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "syntype": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "rorder": {
+      "type": "number"
+    },
+    "show_in_tree": {
+      "type": "number",
+      "required": true,
+      "default": 1
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
