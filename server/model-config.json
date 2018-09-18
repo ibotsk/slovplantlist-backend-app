@@ -1,0 +1,66 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "family": {
+    "dataSource": "slovplantlist",
+    "public": true
+  },
+  "family_apg": {
+    "dataSource": "slovplantlist",
+    "public": true
+  },
+  "genus": {
+    "dataSource": "slovplantlist",
+    "public": true
+  },
+  "nomen_status": {
+    "dataSource": "slovplantlist",
+    "public": true
+  },
+  "synonym": {
+    "dataSource": "slovplantlist",
+    "public": true
+  },
+  "nomenclature": {
+    "dataSource": "slovplantlist",
+    "public": true
+  },
+  "record_info": {
+    "dataSource": "slovplantlist",
+    "public": false
+  }
+}
