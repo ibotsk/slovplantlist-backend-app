@@ -1,26 +1,13 @@
 {
-  "name": "family_apg",
-  "base": "PersistedModel",
+  "name": "role",
+  "base": "Role",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "properties": {
-    "name": {
-      "type": "string"
-    },
-    "vernacular": {
-      "type": "string"
-    }
-  },
+  "properties": {},
   "validations": [],
-  "relations": {
-    "genera": {
-      "type": "hasMany",
-      "model": "genus",
-      "foreignKey": "id_family_apg"
-    }
-  },
+  "relations": {},
   "acls": [
     {
       "accessType": "*",

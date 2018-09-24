@@ -14,7 +14,8 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "slovplantlist",
+    "public": false
   },
   "AccessToken": {
     "dataSource": "db",
@@ -25,14 +26,14 @@
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "slovplantlist",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "slovplantlist",
     "public": false
   },
   "family": {
@@ -62,5 +63,13 @@
   "record_info": {
     "dataSource": "slovplantlist",
     "public": false
+  },
+  "role": {
+    "dataSource": "slovplantlist",
+    "public": true
+  },
+  "user_lb": {
+    "dataSource": "slovplantlist",
+    "public": true
   }
 }
