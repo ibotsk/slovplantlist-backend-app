@@ -1,5 +1,5 @@
 {
-  "name": "synonym",
+  "name": "synonyms",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -21,7 +21,18 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "parent": {
+      "type": "belongsTo",
+      "model": "nomenclature",
+      "foreignKey": "id_parent"
+    },
+    "synonymSpecies": {
+      "type": "belongsTo",
+      "model": "nomenclature",
+      "foreignKey": "id_synonym"
+    }
+  },
   "acls": [],
   "methods": {}
 }

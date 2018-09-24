@@ -26,7 +26,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "nomenclature": {
+      "type": "belongsTo",
+      "model": "nomenclature",
+      "foreignKey": "id_nomenclature"
+    }
+  },
   "acls": [],
   "methods": {}
 }

@@ -89,7 +89,7 @@
       "required": true,
       "default": false
     },
-    "is_basionzm": {
+    "is_basionym": {
       "type": "boolean",
       "required": true,
       "default": false
@@ -99,7 +99,63 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "nomenStatus": {
+      "type": "hasOne",
+      "model": "nomen_status",
+      "foreignKey": "id_nomenclature"
+    },
+    "recordInfo": {
+      "type": "hasOne",
+      "model": "record_info",
+      "foreignKey": "id_nomenclature"
+    },
+    "basionymFor": {
+      "type": "hasMany",
+      "model": "nomenclature",
+      "foreignKey": "id_basionym"
+    },
+    "nomenNovumFor": {
+      "type": "hasMany",
+      "model": "nomenclature",
+      "foreignKey": "id_nomen_novum"
+    },
+    "replacedFor": {
+      "type": "hasMany",
+      "model": "nomenclature",
+      "foreignKey": "id_replaced"
+    },
+    "accepted": {
+      "type": "belongsTo",
+      "model": "nomenclature",
+      "foreignKey": "id_accepted_name"
+    },
+    "genusRel": {
+      "type": "belongsTo",
+      "model": "genus",
+      "foreignKey": "id_genus"
+    },
+    "basionym": {
+      "type": "belongsTo",
+      "model": "nomenclature",
+      "foreignKey": "id_basionym"
+    },
+    "replaced": {
+      "type": "belongsTo",
+      "model": "nomenclature",
+      "foreignKey": "id_replaced"
+    },
+    "nomenNovum": {
+      "type": "belongsTo",
+      "model": "nomenclature",
+      "foreignKey": "id_nomen_novum"
+    },
+    "synonyms": {
+      "type": "hasMany",
+      "model": "synonyms",
+      "foreignKey": "id_parent"
+    }
+  },
   "acls": [],
   "methods": {}
 }

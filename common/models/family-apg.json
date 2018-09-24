@@ -14,7 +14,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "genera": {
+      "type": "hasMany",
+      "model": "genus",
+      "foreignKey": "id_familz_apg"
+    }
+  },
   "acls": [],
   "methods": {}
 }

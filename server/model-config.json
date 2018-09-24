@@ -51,7 +51,7 @@
     "dataSource": "slovplantlist",
     "public": true
   },
-  "synonym": {
+  "synonyms": {
     "dataSource": "slovplantlist",
     "public": true
   },

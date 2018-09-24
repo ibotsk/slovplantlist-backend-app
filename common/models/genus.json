@@ -19,7 +19,23 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "family": {
+      "type": "belongsTo",
+      "model": "family",
+      "foreignKey": "id_family"
+    },
+    "familyApg": {
+      "type": "belongsTo",
+      "model": "family_apg",
+      "foreignKey": "id_family_apg"
+    },
+    "nomenclatures": {
+      "type": "hasMany",
+      "model": "nomenclature",
+      "foreignKey": "id_genus"
+    }
+  },
   "acls": [],
   "methods": {}
 }
