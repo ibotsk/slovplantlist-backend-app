@@ -154,6 +154,45 @@
       "type": "hasMany",
       "model": "synonyms",
       "foreignKey": "id_parent"
+    },
+    "synonymsTaxonomic": {
+      "type": "hasMany",
+      "model": "nomenclature",
+      "foreignKey": "id_parent",
+      "through": "synonyms",
+      "keyThrough": "id_synonym",
+      "scope": {
+        "where": {
+          "syntype": 2
+        },
+        "order": "rorder ASC"
+      }
+    },
+    "synonymsNomenclatoric": {
+      "type": "hasMany",
+      "model": "nomenclature",
+      "foreignKey": "id_parent",
+      "through": "synonyms",
+      "keyThrough": "id_synonym",
+      "scope": {
+        "where": {
+          "syntype": 3
+        },
+        "order": "rorder ASC"
+      }
+    },
+    "synonymsInvalid": {
+      "type": "hasMany",
+      "model": "nomenclature",
+      "foreignKey": "id_parent",
+      "through": "synonyms",
+      "keyThrough": "id_synonym",
+      "scope": {
+        "where": {
+          "syntype": 1
+        },
+        "order": "rorder ASC"
+      }
     }
   },
   "acls": [],
