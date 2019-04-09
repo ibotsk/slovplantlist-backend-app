@@ -150,11 +150,6 @@
       "model": "nomenclature",
       "foreignKey": "id_nomen_novum"
     },
-    "synonyms": {
-      "type": "hasMany",
-      "model": "synonyms",
-      "foreignKey": "id_parent"
-    },
     "synonymsTaxonomic": {
       "type": "hasMany",
       "model": "nomenclature",
@@ -193,6 +188,11 @@
         },
         "order": "rorder ASC"
       }
+    },
+    "parentOfSynonyms": {
+      "type": "hasMany",
+      "model": "synonyms",
+      "foreignKey": "id_parent"
     }
   },
   "acls": [],
