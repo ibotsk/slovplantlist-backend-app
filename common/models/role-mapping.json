@@ -5,7 +5,7 @@
   "options": {
     "validateUpsert": true,
     "mysql": {
-      "table": "RoleMapping"
+      "table": "role_mapping"
     }
   },
   "properties": {},
