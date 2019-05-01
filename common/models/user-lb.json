@@ -7,7 +7,15 @@
   },
   "properties": {},
   "validations": [],
-  "relations": {},
+  "relations": {
+    "roles": {
+      "type": "hasMany",
+      "model": "role",
+      "foreignKey": "principalId",
+      "through": "role_mapping",
+      "keyThrough": "roleId"
+    }
+  },
   "acls": [
     {
       "accessType": "*",
