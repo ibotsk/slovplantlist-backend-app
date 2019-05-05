@@ -74,6 +74,6 @@
   },
   "role_mapping": {
     "dataSource": "slovplantlist",
-    "public": false
+    "public": true
   }
 }
