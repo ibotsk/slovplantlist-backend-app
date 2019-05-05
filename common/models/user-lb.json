@@ -17,6 +17,13 @@
       "foreignKey": "principalId",
       "through": "role_mapping",
       "keyThrough": "roleId"
+    },
+    "genera": {
+      "type": "hasMany",
+      "model": "genus",
+      "foreignKey": "id_user",
+      "through": "users_genera",
+      "keyThrough": "id_genus"
     }
   },
   "acls": [

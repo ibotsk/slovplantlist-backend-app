@@ -34,6 +34,13 @@
       "type": "hasMany",
       "model": "nomenclature",
       "foreignKey": "id_genus"
+    },
+    "users": {
+      "type": "hasMany",
+      "model": "user_lb",
+      "foreignKey": "id_genus",
+      "through": "users_genera",
+      "keyThrough": "id_user"
     }
   },
   "acls": [

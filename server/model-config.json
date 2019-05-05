@@ -75,5 +75,9 @@
   "role_mapping": {
     "dataSource": "slovplantlist",
     "public": true
+  },
+  "users_genera": {
+    "dataSource": "slovplantlist",
+    "public": true
   }
 }
