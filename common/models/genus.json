@@ -34,13 +34,6 @@
       "type": "hasMany",
       "model": "nomenclature",
       "foreignKey": "id_genus"
-    },
-    "users": {
-      "type": "hasMany",
-      "model": "user_lb",
-      "foreignKey": "id_genus",
-      "through": "users_genera",
-      "keyThrough": "id_user"
     }
   },
   "acls": [
@@ -52,6 +45,18 @@
     },
     {
       "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "editor",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "READ",
       "principalType": "ROLE",
       "principalId": "$authenticated",
       "permission": "ALLOW"
