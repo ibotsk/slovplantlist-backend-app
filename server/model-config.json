@@ -79,5 +79,9 @@
   "users_genera": {
     "dataSource": "slovplantlist",
     "public": true
+  },
+  "nomenclature-owner": {
+    "dataSource": "slovplantlist",
+    "public": true
   }
 }
