@@ -1,0 +1,144 @@
+{
+  "name": "nomenclature-owner",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": false,
+    "mysql": {
+      "table": "nomenclature_owners"
+    }
+  },
+  "properties": {
+    "ntype": {
+      "type": "string",
+      "required": true
+    },
+    "hybrid": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "genus": {
+      "type": "string"
+    },
+    "species": {
+      "type": "string"
+    },
+    "subsp": {
+      "type": "string"
+    },
+    "var": {
+      "type": "string"
+    },
+    "subvar": {
+      "type": "string"
+    },
+    "forma": {
+      "type": "string"
+    },
+    "nothosubsp": {
+      "type": "string"
+    },
+    "nothoforma": {
+      "type": "string"
+    },
+    "authors": {
+      "type": "string"
+    },
+    "genus_h": {
+      "type": "string"
+    },
+    "species_h": {
+      "type": "string"
+    },
+    "subsp_h": {
+      "type": "string"
+    },
+    "var_h": {
+      "type": "string"
+    },
+    "subvar_h": {
+      "type": "string"
+    },
+    "forma_h": {
+      "type": "string"
+    },
+    "nothosubsp_h": {
+      "type": "string"
+    },
+    "nothoforma_h": {
+      "type": "string"
+    },
+    "authors_h": {
+      "type": "string"
+    },
+    "publication": {
+      "type": "string"
+    },
+    "tribus": {
+      "type": "string"
+    },
+    "vernacular": {
+      "type": "string"
+    },
+    "ntype_order": {
+      "type": "number"
+    },
+    "syn_type": {
+      "type": "number"
+    },
+    "id_genus": {
+      "type": "number"
+    },
+    "is_isonym": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "is_basionym": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "notes": {
+      "type": "string"
+    },
+    "owner_ids": {
+      "type": "string"
+    },
+    "owner_names": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "accepted": {
+      "type": "belongsTo",
+      "model": "nomenclature",
+      "foreignKey": "id_accepted_name"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "find"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "count"
+    }
+  ],
+  "methods": {}
+}

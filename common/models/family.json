@@ -31,6 +31,18 @@
     {
       "accessType": "*",
       "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "editor",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
       "principalId": "$authenticated",
       "permission": "ALLOW"
     }

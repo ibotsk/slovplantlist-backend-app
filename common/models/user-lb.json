@@ -3,11 +3,29 @@
   "base": "User",
   "idInjection": true,
   "options": {
-    "validateUpsert": true
+    "validateUpsert": true,
+    "mysql": {
+      "table": "users"
+    }
   },
   "properties": {},
   "validations": [],
-  "relations": {},
+  "relations": {
+    "roles": {
+      "type": "hasMany",
+      "model": "role",
+      "foreignKey": "principalId",
+      "through": "role_mapping",
+      "keyThrough": "roleId"
+    },
+    "genera": {
+      "type": "hasMany",
+      "model": "genus",
+      "foreignKey": "id_user",
+      "through": "users_genera",
+      "keyThrough": "id_genus"
+    }
+  },
   "acls": [
     {
       "accessType": "*",
@@ -18,7 +36,7 @@
     {
       "accessType": "*",
       "principalType": "ROLE",
-      "principalId": "$authenticated",
+      "principalId": "admin",
       "permission": "ALLOW"
     },
     {
@@ -27,6 +45,20 @@
       "principalId": "$unauthenticated",
       "permission": "ALLOW",
       "property": "login"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "findById"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "__get__genera"
     }
   ],
   "methods": {}

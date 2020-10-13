@@ -1,9 +1,12 @@
 {
-  "name": "role",
-  "base": "Role",
+  "name": "role_mapping",
+  "base": "RoleMapping",
   "idInjection": true,
   "options": {
-    "validateUpsert": true
+    "validateUpsert": true,
+    "mysql": {
+      "table": "role_mapping"
+    }
   },
   "properties": {},
   "validations": [],
@@ -16,9 +19,9 @@
       "permission": "DENY"
     },
     {
-      "accessType": "READ",
+      "accessType": "*",
       "principalType": "ROLE",
-      "principalId": "$authenticated",
+      "principalId": "admin",
       "permission": "ALLOW"
     }
   ],
