@@ -27,7 +27,7 @@
       "model": "nomenclature",
       "foreignKey": "id_parent"
     },
-    "synonymSpecies": {
+    "synonym": {
       "type": "belongsTo",
       "model": "nomenclature",
       "foreignKey": "id_synonym"

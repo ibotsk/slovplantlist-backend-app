@@ -152,11 +152,12 @@
     },
     "synonymsTaxonomic": {
       "type": "hasMany",
-      "model": "nomenclature",
+      "model": "synonyms",
       "foreignKey": "id_parent",
-      "through": "synonyms",
-      "keyThrough": "id_synonym",
       "scope": {
+        "include": [
+          "synonym"
+        ],
         "where": {
           "syntype": 2
         },
@@ -165,11 +166,12 @@
     },
     "synonymsNomenclatoric": {
       "type": "hasMany",
-      "model": "nomenclature",
+      "model": "synonyms",
       "foreignKey": "id_parent",
-      "through": "synonyms",
-      "keyThrough": "id_synonym",
       "scope": {
+        "include": [
+          "synonym"
+        ],
         "where": {
           "syntype": 3
         },
@@ -178,11 +180,12 @@
     },
     "synonymsInvalid": {
       "type": "hasMany",
-      "model": "nomenclature",
+      "model": "synonyms",
       "foreignKey": "id_parent",
-      "through": "synonyms",
-      "keyThrough": "id_synonym",
       "scope": {
+        "include": [
+          "synonym"
+        ],
         "where": {
           "syntype": 1
         },
