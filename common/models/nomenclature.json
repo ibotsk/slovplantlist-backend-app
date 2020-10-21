@@ -192,6 +192,19 @@
         "order": "rorder ASC"
       }
     },
+    "synonyms-nomenclatoric-through": {
+      "type": "hasMany",
+      "model": "nomenclature",
+      "foreignKey": "id_parent",
+      "through": "synonyms",
+      "keyThrough": "id_synonym",
+      "scope": {
+        "where": {
+          "syntype": 3
+        },
+        "order": "rorder ASC"
+      }
+    },
     "parentOfSynonyms": {
       "type": "hasMany",
       "model": "synonyms",
