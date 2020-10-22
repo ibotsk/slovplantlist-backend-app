@@ -1,5 +1,5 @@
 {
-  "name": "role_mapping",
+  "name": "role-mapping",
   "base": "RoleMapping",
   "idInjection": true,
   "options": {

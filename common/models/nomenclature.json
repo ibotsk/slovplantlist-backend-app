@@ -42,32 +42,59 @@
     "authors": {
       "type": "string"
     },
-    "genus_h": {
-      "type": "string"
+    "genusH": {
+      "type": "string",
+      "mysql": {
+        "columnName": "genus_h"
+      }
     },
-    "species_h": {
-      "type": "string"
+    "speciesH": {
+      "type": "string",
+      "mysql": {
+        "columnName": "species_h"
+      }
     },
-    "subsp_h": {
-      "type": "string"
+    "subspH": {
+      "type": "string",
+      "mysql": {
+        "columnName": "subsp_h"
+      }
     },
-    "var_h": {
-      "type": "string"
+    "varH": {
+      "type": "string",
+      "mysql": {
+        "columnName": "var_h"
+      }
     },
-    "subvar_h": {
-      "type": "string"
+    "subvarH": {
+      "type": "string",
+      "mysql": {
+        "columnName": "subvar_h"
+      }
     },
-    "forma_h": {
-      "type": "string"
+    "formaH": {
+      "type": "string",
+      "mysql": {
+        "columnName": "forma_h"
+      }
     },
-    "nothosubsp_h": {
-      "type": "string"
+    "nothosubspH": {
+      "type": "string",
+      "mysql": {
+        "columnName": "nothosubsp_h"
+      }
     },
-    "nothoforma_h": {
-      "type": "string"
+    "nothoformaH": {
+      "type": "string",
+      "mysql": {
+        "columnName": "nothoforma_h"
+      }
     },
-    "authors_h": {
-      "type": "string"
+    "authorsH": {
+      "type": "string",
+      "mysql": {
+        "columnName": "authors_h"
+      }
     },
     "publication": {
       "type": "string"
@@ -78,82 +105,124 @@
     "vernacular": {
       "type": "string"
     },
-    "ntype_order": {
-      "type": "number"
+    "ntypeOrder": {
+      "type": "number",
+      "mysql": {
+        "columnName": "ntype_order"
+      }
     },
-    "syn_type": {
-      "type": "number"
+    "synType": {
+      "type": "number",
+      "mysql": {
+        "columnName": "syn_type"
+      }
     },
-    "is_isonym": {
+    "isIsonym": {
       "type": "boolean",
       "required": true,
-      "default": false
+      "default": false,
+      "mysql": {
+        "columnName": "is_isonym"
+      }
     },
-    "is_basionym": {
+    "isBasionym": {
       "type": "boolean",
       "required": true,
-      "default": false
+      "default": false,
+      "mysql": {
+        "columnName": "is_basionym"
+      }
     },
     "notes": {
       "type": "string"
+    },
+    "idAcceptedName": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_accepted_name"
+      }
+    },
+    "idGenus": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_genus"
+      }
+    },
+    "idBasionym": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_basionym"
+      }
+    },
+    "idReplaced": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_replaced"
+      }
+    },
+    "idNomenNovum": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_nomen_novum"
+      }
     }
   },
   "validations": [],
   "relations": {
     "nomenStatus": {
       "type": "hasOne",
-      "model": "nomen_status",
-      "foreignKey": "id_nomenclature"
+      "model": "nomen-status",
+      "foreignKey": "idNomenclature"
     },
     "recordInfo": {
       "type": "hasOne",
-      "model": "record_info",
-      "foreignKey": "id_nomenclature"
+      "model": "record-info",
+      "foreignKey": "idNomenclature"
     },
     "basionymFor": {
       "type": "hasMany",
       "model": "nomenclature",
-      "foreignKey": "id_basionym"
+      "foreignKey": "idBasionym"
     },
     "nomenNovumFor": {
       "type": "hasMany",
       "model": "nomenclature",
-      "foreignKey": "id_nomen_novum"
+      "foreignKey": "idNomenNovum"
     },
     "replacedFor": {
       "type": "hasMany",
       "model": "nomenclature",
-      "foreignKey": "id_replaced"
+      "foreignKey": "idReplaced"
     },
     "accepted": {
       "type": "belongsTo",
       "model": "nomenclature",
-      "foreignKey": "id_accepted_name"
+      "foreignKey": "idAcceptedName"
     },
     "genusRel": {
       "type": "belongsTo",
       "model": "genus",
-      "foreignKey": "id_genus"
+      "foreignKey": "idGenus"
     },
     "basionym": {
       "type": "belongsTo",
       "model": "nomenclature",
-      "foreignKey": "id_basionym"
+      "foreignKey": "idBasionym"
     },
     "replaced": {
       "type": "belongsTo",
       "model": "nomenclature",
-      "foreignKey": "id_replaced"
+      "foreignKey": "idReplaced"
     },
     "nomenNovum": {
       "type": "belongsTo",
       "model": "nomenclature",
-      "foreignKey": "id_nomen_novum"
+      "foreignKey": "idNomenNovum"
     },
     "synonymsTaxonomic": {
       "type": "hasMany",
       "model": "synonyms",
-      "foreignKey": "id_parent",
+      "foreignKey": "idParent",
       "scope": {
         "include": [
           "synonym"
@@ -167,7 +236,7 @@
     "synonymsNomenclatoric": {
       "type": "hasMany",
       "model": "synonyms",
-      "foreignKey": "id_parent",
+      "foreignKey": "idParent",
       "scope": {
         "include": [
           "synonym"
@@ -181,7 +250,7 @@
     "synonymsInvalid": {
       "type": "hasMany",
       "model": "synonyms",
-      "foreignKey": "id_parent",
+      "foreignKey": "idParent",
       "scope": {
         "include": [
           "synonym"
@@ -195,9 +264,9 @@
     "synonyms-nomenclatoric-through": {
       "type": "hasMany",
       "model": "nomenclature",
-      "foreignKey": "id_parent",
+      "foreignKey": "idParent",
       "through": "synonyms",
-      "keyThrough": "id_synonym",
+      "keyThrough": "idSynonym",
       "scope": {
         "where": {
           "syntype": 3
@@ -208,7 +277,7 @@
     "parentOfSynonyms": {
       "type": "hasMany",
       "model": "synonyms",
-      "foreignKey": "id_parent"
+      "foreignKey": "idParent"
     }
   },
   "acls": [

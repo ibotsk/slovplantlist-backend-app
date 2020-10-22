@@ -1,5 +1,5 @@
 {
-  "name": "users_genera",
+  "name": "users-genera",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -8,18 +8,33 @@
       "table": "users_genera"
     }
   },
-  "properties": {},
+  "properties": {
+    "idUser": {
+      "type": "number",
+      "required": true,
+      "mysql": {
+        "columnName": "id_user"
+      }
+    },
+    "idGenus": {
+      "type": "number",
+      "required": true,
+      "mysql": {
+        "columnName": "id_genus"
+      }
+    }
+  },
   "validations": [],
   "relations": {
     "userLb": {
       "type": "belongsTo",
-      "model": "user_lb",
-      "foreignKey": "id_user"
+      "model": "user-lb",
+      "foreignKey": "idUser"
     },
     "genus": {
       "type": "belongsTo",
       "model": "genus",
-      "foreignKey": "id_genus"
+      "foreignKey": "idGenus"
     }
   },
   "acls": [

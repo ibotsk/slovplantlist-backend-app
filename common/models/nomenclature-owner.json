@@ -45,32 +45,59 @@
     "authors": {
       "type": "string"
     },
-    "genus_h": {
-      "type": "string"
+    "genusH": {
+      "type": "string",
+      "mysql": {
+        "columnName": "genus_h"
+      }
     },
-    "species_h": {
-      "type": "string"
+    "speciesH": {
+      "type": "string",
+      "mysql": {
+        "columnName": "species_h"
+      }
     },
-    "subsp_h": {
-      "type": "string"
+    "subspH": {
+      "type": "string",
+      "mysql": {
+        "columnName": "subsp_h"
+      }
     },
-    "var_h": {
-      "type": "string"
+    "varH": {
+      "type": "string",
+      "mysql": {
+        "columnName": "var_h"
+      }
     },
-    "subvar_h": {
-      "type": "string"
+    "subvarH": {
+      "type": "string",
+      "mysql": {
+        "columnName": "subvar_h"
+      }
     },
-    "forma_h": {
-      "type": "string"
+    "formaH": {
+      "type": "string",
+      "mysql": {
+        "columnName": "forma_h"
+      }
     },
-    "nothosubsp_h": {
-      "type": "string"
+    "nothosubspH": {
+      "type": "string",
+      "mysql": {
+        "columnName": "nothosubsp_h"
+      }
     },
-    "nothoforma_h": {
-      "type": "string"
+    "nothoformaH": {
+      "type": "string",
+      "mysql": {
+        "columnName": "nothoforma_h"
+      }
     },
-    "authors_h": {
-      "type": "string"
+    "authorsH": {
+      "type": "string",
+      "mysql": {
+        "columnName": "authors_h"
+      }
     },
     "publication": {
       "type": "string"
@@ -81,33 +108,78 @@
     "vernacular": {
       "type": "string"
     },
-    "ntype_order": {
-      "type": "number"
+    "ntypeOrder": {
+      "type": "number",
+      "mysql": {
+        "columnName": "ntype_order"
+      }
     },
-    "syn_type": {
-      "type": "number"
+    "synType": {
+      "type": "number",
+      "mysql": {
+        "columnName": "syn_type"
+      }
     },
-    "id_genus": {
-      "type": "number"
-    },
-    "is_isonym": {
+    "isIsonym": {
       "type": "boolean",
       "required": true,
-      "default": false
+      "default": false,
+      "mysql": {
+        "columnName": "is_isonym"
+      }
     },
-    "is_basionym": {
+    "isBasionym": {
       "type": "boolean",
       "required": true,
-      "default": false
+      "default": false,
+      "mysql": {
+        "columnName": "is_basionym"
+      }
     },
     "notes": {
       "type": "string"
     },
-    "owner_ids": {
-      "type": "string"
+    "ownerIds": {
+      "type": "string",
+      "mysql": {
+        "columnName": "owner_ids"
+      }
     },
-    "owner_names": {
-      "type": "string"
+    "ownerNames": {
+      "type": "string",
+      "mysql": {
+        "columnName": "owner_names"
+      }
+    },
+    "idAcceptedName": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_accepted_name"
+      }
+    },
+    "idGenus": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_genus"
+      }
+    },
+    "idBasionym": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_basionym"
+      }
+    },
+    "idReplaced": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_replaced"
+      }
+    },
+    "idNomenNovum": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_nomen_novum"
+      }
     }
   },
   "validations": [],
@@ -115,7 +187,7 @@
     "accepted": {
       "type": "belongsTo",
       "model": "nomenclature",
-      "foreignKey": "id_accepted_name"
+      "foreignKey": "idAcceptedName"
     }
   },
   "acls": [
