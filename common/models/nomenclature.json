@@ -169,27 +169,27 @@
   },
   "validations": [],
   "relations": {
-    "nomenStatus": {
+    "nomen-status": {
       "type": "hasOne",
       "model": "nomen-status",
       "foreignKey": "idNomenclature"
     },
-    "recordInfo": {
+    "record-info": {
       "type": "hasOne",
       "model": "record-info",
       "foreignKey": "idNomenclature"
     },
-    "basionymFor": {
+    "basionym-for": {
       "type": "hasMany",
       "model": "nomenclature",
       "foreignKey": "idBasionym"
     },
-    "nomenNovumFor": {
+    "nomen-novum-for": {
       "type": "hasMany",
       "model": "nomenclature",
       "foreignKey": "idNomenNovum"
     },
-    "replacedFor": {
+    "replaced-for": {
       "type": "hasMany",
       "model": "nomenclature",
       "foreignKey": "idReplaced"
@@ -199,7 +199,7 @@
       "model": "nomenclature",
       "foreignKey": "idAcceptedName"
     },
-    "genusRel": {
+    "genus-rel": {
       "type": "belongsTo",
       "model": "genus",
       "foreignKey": "idGenus"
@@ -214,12 +214,12 @@
       "model": "nomenclature",
       "foreignKey": "idReplaced"
     },
-    "nomenNovum": {
+    "nomen-novum": {
       "type": "belongsTo",
       "model": "nomenclature",
       "foreignKey": "idNomenNovum"
     },
-    "synonymsTaxonomic": {
+    "synonyms-taxonomic": {
       "type": "hasMany",
       "model": "synonyms",
       "foreignKey": "idParent",
@@ -233,7 +233,7 @@
         "order": "rorder ASC"
       }
     },
-    "synonymsNomenclatoric": {
+    "synonyms-nomenclatoric": {
       "type": "hasMany",
       "model": "synonyms",
       "foreignKey": "idParent",
@@ -247,7 +247,7 @@
         "order": "rorder ASC"
       }
     },
-    "synonymsInvalid": {
+    "synonyms-invalid": {
       "type": "hasMany",
       "model": "synonyms",
       "foreignKey": "idParent",
@@ -274,7 +274,7 @@
         "order": "rorder ASC"
       }
     },
-    "parentOfSynonyms": {
+    "parent-of-synonyms": {
       "type": "hasMany",
       "model": "synonyms",
       "foreignKey": "idParent"

@@ -39,7 +39,7 @@
       "model": "family",
       "foreignKey": "idFamily"
     },
-    "familyApg": {
+    "family-apg": {
       "type": "belongsTo",
       "model": "family-apg",
       "foreignKey": "idFamilyApg"
