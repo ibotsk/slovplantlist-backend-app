@@ -1,9 +1,12 @@
 {
-  "name": "family_apg",
+  "name": "family-apg",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
-    "validateUpsert": true
+    "validateUpsert": true,
+    "mysql": {
+      "table": "family_apg"
+    }
   },
   "properties": {
     "name": {
@@ -18,7 +21,7 @@
     "genera": {
       "type": "hasMany",
       "model": "genus",
-      "foreignKey": "id_family_apg"
+      "foreignKey": "idFamilyApg"
     }
   },
   "acls": [

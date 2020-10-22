@@ -40,7 +40,7 @@
     "dataSource": "slovplantlist",
     "public": true
   },
-  "family_apg": {
+  "family-apg": {
     "dataSource": "slovplantlist",
     "public": true
   },
@@ -48,7 +48,7 @@
     "dataSource": "slovplantlist",
     "public": true
   },
-  "nomen_status": {
+  "nomen-status": {
     "dataSource": "slovplantlist",
     "public": true
   },
@@ -60,7 +60,7 @@
     "dataSource": "slovplantlist",
     "public": true
   },
-  "record_info": {
+  "record-info": {
     "dataSource": "slovplantlist",
     "public": false
   },
@@ -68,15 +68,15 @@
     "dataSource": "slovplantlist",
     "public": true
   },
-  "user_lb": {
+  "user-lb": {
     "dataSource": "slovplantlist",
     "public": true
   },
-  "role_mapping": {
+  "role-mapping": {
     "dataSource": "slovplantlist",
     "public": true
   },
-  "users_genera": {
+  "users-genera": {
     "dataSource": "slovplantlist",
     "public": true
   },

@@ -16,6 +16,20 @@
     },
     "vernacular": {
       "type": "string"
+    },
+    "idFamily": {
+      "type": "number",
+      "required": true,
+      "mysql": {
+        "columnName": "id_family"
+      }
+    },
+    "idFamilyApg": {
+      "type": "number",
+      "required": true,
+      "mysql": {
+        "columnName": "id_family_apg"
+      }
     }
   },
   "validations": [],
@@ -23,17 +37,17 @@
     "family": {
       "type": "belongsTo",
       "model": "family",
-      "foreignKey": "id_family"
+      "foreignKey": "idFamily"
     },
-    "familyApg": {
+    "family-apg": {
       "type": "belongsTo",
-      "model": "family_apg",
-      "foreignKey": "id_family_apg"
+      "model": "family-apg",
+      "foreignKey": "idFamilyApg"
     },
     "nomenclatures": {
       "type": "hasMany",
       "model": "nomenclature",
-      "foreignKey": "id_genus"
+      "foreignKey": "idGenus"
     }
   },
   "acls": [

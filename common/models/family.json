@@ -18,7 +18,7 @@
     "genera": {
       "type": "hasMany",
       "model": "genus",
-      "foreignKey": "id_family"
+      "foreignKey": "idFamily"
     }
   },
   "acls": [

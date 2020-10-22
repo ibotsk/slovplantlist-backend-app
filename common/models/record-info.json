@@ -1,28 +1,49 @@
 {
-  "name": "record_info",
+  "name": "record-info",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
-    "validateUpsert": true
+    "validateUpsert": true,
+    "mysql": {
+      "table": "record_info"
+    }
   },
   "properties": {
-    "inserted_by": {
-      "type": "string"
+    "insertedBy": {
+      "type": "string",
+      "mysql": {
+        "columnName": "inserted_by"
+      }
     },
-    "inserted_date": {
-      "type": "date"
+    "insertedDate": {
+      "type": "date",
+      "mysql": {
+        "columnName": "inserted_date"
+      }
     },
-    "checked_by": {
-      "type": "string"
+    "checkedBy": {
+      "type": "string",
+      "mysql": {
+        "columnName": "checked_by"
+      }
     },
-    "checked_date": {
-      "type": "date"
+    "checkedDate": {
+      "type": "date",
+      "mysql": {
+        "columnName": "checked_date"
+      }
     },
-    "reviewed_by": {
-      "type": "string"
+    "reviewedBy": {
+      "type": "string",
+      "mysql": {
+        "columnName": "reviewed_by"
+      }
     },
-    "reviewed_date": {
-      "type": "date"
+    "reviewedDate": {
+      "type": "date",
+      "mysql": {
+        "columnName": "reviewed_date"
+      }
     }
   },
   "validations": [],
@@ -30,7 +51,7 @@
     "nomenclature": {
       "type": "belongsTo",
       "model": "nomenclature",
-      "foreignKey": "id_nomenclature"
+      "foreignKey": "idNomenclature"
     }
   },
   "acls": [

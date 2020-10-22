@@ -1,9 +1,12 @@
 {
-  "name": "nomen_status",
+  "name": "nomen-status",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
-    "validateUpsert": true
+    "validateUpsert": true,
+    "mysql": {
+      "table": "nomen_status"
+    }
   },
   "properties": {
     "allochthonous": {
@@ -30,7 +33,7 @@
     "nomenclature": {
       "type": "belongsTo",
       "model": "nomenclature",
-      "foreignKey": "id_nomenclature"
+      "foreignKey": "idNomenclature"
     }
   },
   "acls": [

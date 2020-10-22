@@ -1,5 +1,5 @@
 {
-  "name": "user_lb",
+  "name": "user-lb",
   "base": "User",
   "idInjection": true,
   "options": {
@@ -15,15 +15,15 @@
       "type": "hasMany",
       "model": "role",
       "foreignKey": "principalId",
-      "through": "role_mapping",
+      "through": "role-mapping",
       "keyThrough": "roleId"
     },
     "genera": {
       "type": "hasMany",
       "model": "genus",
-      "foreignKey": "id_user",
-      "through": "users_genera",
-      "keyThrough": "id_genus"
+      "foreignKey": "idUser",
+      "through": "users-genera",
+      "keyThrough": "idGenus"
     }
   },
   "acls": [

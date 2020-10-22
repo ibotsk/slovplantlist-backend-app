@@ -6,6 +6,18 @@
     "validateUpsert": true
   },
   "properties": {
+    "idParent": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_parent"
+      }
+    },
+    "idSynonym": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_synonym"
+      }
+    },
     "syntype": {
       "type": "number",
       "required": true,
@@ -14,10 +26,13 @@
     "rorder": {
       "type": "number"
     },
-    "show_in_tree": {
+    "showInTree": {
       "type": "number",
       "required": true,
-      "default": 1
+      "default": 1,
+      "mysql": {
+        "columnName": "show_in_tree"
+      }
     }
   },
   "validations": [],
@@ -25,12 +40,12 @@
     "parent": {
       "type": "belongsTo",
       "model": "nomenclature",
-      "foreignKey": "id_parent"
+      "foreignKey": "idParent"
     },
     "synonym": {
       "type": "belongsTo",
       "model": "nomenclature",
-      "foreignKey": "id_synonym"
+      "foreignKey": "idSynonym"
     }
   },
   "acls": [
