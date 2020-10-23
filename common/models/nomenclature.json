@@ -261,6 +261,20 @@
         "order": "rorder ASC"
       }
     },
+    "synonyms-misidentification": {
+      "type": "hasMany",
+      "model": "synonyms",
+      "foreignKey": "idParent",
+      "scope": {
+        "include": [
+          "synonym"
+        ],
+        "where": {
+          "syntype": 4
+        },
+        "order": "rorder ASC"
+      }
+    },
     "synonyms-nomenclatoric-through": {
       "type": "hasMany",
       "model": "nomenclature",
