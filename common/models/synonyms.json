@@ -33,6 +33,12 @@
       "mysql": {
         "columnName": "show_in_tree"
       }
+    },
+    "misidentificationAuthor": {
+      "type": "String",
+      "mysql": {
+        "columnName": "misidentification_author"
+      }
     }
   },
   "validations": [],
