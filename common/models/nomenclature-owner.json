@@ -42,6 +42,12 @@
     "nothoforma": {
       "type": "string"
     },
+    "proles": {
+      "type": "string"
+    },
+    "unranked": {
+      "type": "string"
+    },
     "authors": {
       "type": "string"
     },
@@ -112,12 +118,6 @@
       "type": "number",
       "mysql": {
         "columnName": "ntype_order"
-      }
-    },
-    "synType": {
-      "type": "number",
-      "mysql": {
-        "columnName": "syn_type"
       }
     },
     "isIsonym": {
