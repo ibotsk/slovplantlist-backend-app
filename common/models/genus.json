@@ -6,6 +6,9 @@
     "validateUpsert": true
   },
   "properties": {
+    "ntype": {
+      "type": "string"
+    },
     "name": {
       "type": "string",
       "required": true
@@ -16,6 +19,12 @@
     },
     "vernacular": {
       "type": "string"
+    },
+    "idAcceptedName": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_accepted_name"
+      }
     },
     "idFamily": {
       "type": "number",
@@ -48,6 +57,22 @@
       "type": "hasMany",
       "model": "nomenclature",
       "foreignKey": "idGenus"
+    },
+    "synonyms": {
+      "type": "hasMany",
+      "model": "synonyms-genera",
+      "foreignKey": "idParent",
+      "scope": {
+        "include": [
+          "synonym"
+        ],
+        "order": "rorder ASC"
+      }
+    },
+    "accepted": {
+      "type": "belongsTo",
+      "model": "genus",
+      "foreignKey": "idAcceptedName"
     }
   },
   "acls": [
