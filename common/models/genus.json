@@ -7,7 +7,8 @@
   },
   "properties": {
     "ntype": {
-      "type": "string"
+      "type": "string",
+      "default": "A"
     },
     "name": {
       "type": "string",
@@ -28,14 +29,12 @@
     },
     "idFamily": {
       "type": "number",
-      "required": true,
       "mysql": {
         "columnName": "id_family"
       }
     },
     "idFamilyApg": {
       "type": "number",
-      "required": true,
       "mysql": {
         "columnName": "id_family_apg"
       }
