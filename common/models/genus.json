@@ -68,6 +68,11 @@
         "order": "rorder ASC"
       }
     },
+    "synonyms-no-include": {
+      "type": "hasMany",
+      "model": "synonyms-genera",
+      "foreignKey": "idParent"
+    },
     "accepted": {
       "type": "belongsTo",
       "model": "genus",
