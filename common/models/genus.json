@@ -6,6 +6,10 @@
     "validateUpsert": true
   },
   "properties": {
+    "ntype": {
+      "type": "string",
+      "default": "A"
+    },
     "name": {
       "type": "string",
       "required": true
@@ -17,16 +21,20 @@
     "vernacular": {
       "type": "string"
     },
+    "idAcceptedName": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_accepted_name"
+      }
+    },
     "idFamily": {
       "type": "number",
-      "required": true,
       "mysql": {
         "columnName": "id_family"
       }
     },
     "idFamilyApg": {
       "type": "number",
-      "required": true,
       "mysql": {
         "columnName": "id_family_apg"
       }
@@ -48,6 +56,27 @@
       "type": "hasMany",
       "model": "nomenclature",
       "foreignKey": "idGenus"
+    },
+    "synonyms": {
+      "type": "hasMany",
+      "model": "synonyms-genera",
+      "foreignKey": "idParent",
+      "scope": {
+        "include": [
+          { "synonym": "accepted" }
+        ],
+        "order": "rorder ASC"
+      }
+    },
+    "synonyms-no-include": {
+      "type": "hasMany",
+      "model": "synonyms-genera",
+      "foreignKey": "idParent"
+    },
+    "accepted": {
+      "type": "belongsTo",
+      "model": "genus",
+      "foreignKey": "idAcceptedName"
     }
   },
   "acls": [

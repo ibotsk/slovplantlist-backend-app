@@ -83,5 +83,9 @@
   "nomenclature-owner": {
     "dataSource": "slovplantlist",
     "public": true
+  },
+  "synonyms-genera": {
+    "dataSource": "slovplantlist",
+    "public": true
   }
 }
