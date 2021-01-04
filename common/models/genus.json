@@ -63,7 +63,7 @@
       "foreignKey": "idParent",
       "scope": {
         "include": [
-          "synonym"
+          { "synonym": "accepted" }
         ],
         "order": "rorder ASC"
       }
