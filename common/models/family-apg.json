@@ -16,7 +16,7 @@
       "type": "string"
     },
     "checkedTimestamp": {
-      "type": "string",
+      "type": "date",
       "mysql": {
         "columnName": "checked_timestamp"
       }

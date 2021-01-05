@@ -40,7 +40,7 @@
       }
     },
     "checkedTimestamp": {
-      "type": "string",
+      "type": "date",
       "mysql": {
         "columnName": "checked_timestamp"
       }
@@ -75,7 +75,9 @@
       "foreignKey": "idParent",
       "scope": {
         "include": [
-          { "synonym": "accepted" }
+          {
+            "synonym": "accepted"
+          }
         ],
         "order": "rorder ASC"
       }
