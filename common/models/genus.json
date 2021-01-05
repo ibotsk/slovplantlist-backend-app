@@ -38,6 +38,18 @@
       "mysql": {
         "columnName": "id_family_apg"
       }
+    },
+    "checkedTimestamp": {
+      "type": "string",
+      "mysql": {
+        "columnName": "checked_timestamp"
+      }
+    },
+    "checkedBy": {
+      "type": "string",
+      "mysql": {
+        "columnName": "checked_by"
+      }
     }
   },
   "validations": [],
