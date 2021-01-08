@@ -14,6 +14,18 @@
     },
     "vernacular": {
       "type": "string"
+    },
+    "checkedTimestamp": {
+      "type": "date",
+      "mysql": {
+        "columnName": "checked_timestamp"
+      }
+    },
+    "checkedBy": {
+      "type": "string",
+      "mysql": {
+        "columnName": "checked_by"
+      }
     }
   },
   "validations": [],

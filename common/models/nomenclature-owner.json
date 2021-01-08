@@ -180,6 +180,12 @@
       "mysql": {
         "columnName": "id_nomen_novum"
       }
+    },
+    "checkedTimestamp": {
+      "type": "date",
+      "mysql": {
+        "columnName": "checked_timestamp"
+      }
     }
   },
   "validations": [],
