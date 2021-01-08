@@ -139,6 +139,9 @@
     "notes": {
       "type": "string"
     },
+    "aggregate": {
+      "type": "string"
+    },
     "ownerIds": {
       "type": "string",
       "mysql": {
