@@ -136,6 +136,9 @@
     "notes": {
       "type": "string"
     },
+    "aggregate": {
+      "type": "string"
+    },
     "idAcceptedName": {
       "type": "number",
       "mysql": {
