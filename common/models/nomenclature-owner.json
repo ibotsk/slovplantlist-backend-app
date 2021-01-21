@@ -184,6 +184,18 @@
         "columnName": "id_nomen_novum"
       }
     },
+    "insertedBy": {
+      "type": "string",
+      "mysql": {
+        "columnName": "inserted_by"
+      }
+    },
+    "insertedMethod": {
+      "type": "string",
+      "mysql": {
+        "columnName": "inserted_method"
+      }
+    },
     "checkedTimestamp": {
       "type": "date",
       "mysql": {
