@@ -196,6 +196,18 @@
         "columnName": "inserted_method"
       }
     },
+    "createdTimestamp": {
+      "type": "date",
+      "mysql": {
+        "columnName": "created_timestamp"
+      }
+    },
+    "updatedTimestamp": {
+      "type": "date",
+      "mysql": {
+        "columnName": "updated_timestamp"
+      }
+    },
     "checkedTimestamp": {
       "type": "date",
       "mysql": {
