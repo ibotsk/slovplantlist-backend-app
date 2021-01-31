@@ -21,12 +21,6 @@
     "vernacular": {
       "type": "string"
     },
-    "idAcceptedName": {
-      "type": "number",
-      "mysql": {
-        "columnName": "id_accepted_name"
-      }
-    },
     "idFamily": {
       "type": "number",
       "mysql": {
@@ -74,11 +68,7 @@
       "model": "synonyms-genera",
       "foreignKey": "idParent",
       "scope": {
-        "include": [
-          {
-            "synonym": "accepted"
-          }
-        ],
+        "include": "synonym",
         "order": "rorder ASC"
       }
     },
@@ -88,9 +78,12 @@
       "foreignKey": "idParent"
     },
     "accepted": {
-      "type": "belongsTo",
-      "model": "genus",
-      "foreignKey": "idAcceptedName"
+      "type": "hasMany",
+      "model": "synonyms-genera",
+      "foreignKey": "idSynonym",
+      "scope": {
+        "include": "parent"
+      }
     }
   },
   "acls": [
