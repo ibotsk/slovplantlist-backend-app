@@ -19,8 +19,7 @@
         },
         "cors": false,
         "sharedMethods": {
-            "patchOrCreate": false,
-            "prototype.patchAttributes": false
+            "destroyAll": true
         }
     }
 }
