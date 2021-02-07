@@ -196,6 +196,18 @@
         "columnName": "inserted_method"
       }
     },
+    "updatedBy": {
+      "type": "string",
+      "mysql": {
+        "columnName": "updated_by"
+      }
+    },
+    "updatedMethod": {
+      "type": "string",
+      "mysql": {
+        "columnName": "updated_method"
+      }
+    },
     "createdTimestamp": {
       "type": "date",
       "mysql": {

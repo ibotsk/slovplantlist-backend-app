@@ -139,6 +139,9 @@
     "aggregate": {
       "type": "string"
     },
+    "subaggregate": {
+      "type": "string"
+    },
     "idAcceptedName": {
       "type": "number",
       "mysql": {
@@ -179,6 +182,18 @@
       "type": "string",
       "mysql": {
         "columnName": "inserted_method"
+      }
+    },
+    "updatedBy": {
+      "type": "string",
+      "mysql": {
+        "columnName": "updated_by"
+      }
+    },
+    "updatedMethod": {
+      "type": "string",
+      "mysql": {
+        "columnName": "updated_method"
       }
     },
     "checkedTimestamp": {
