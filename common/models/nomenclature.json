@@ -142,12 +142,6 @@
     "subaggregate": {
       "type": "string"
     },
-    "idAcceptedName": {
-      "type": "number",
-      "mysql": {
-        "columnName": "id_accepted_name"
-      }
-    },
     "idGenus": {
       "type": "number",
       "mysql": {
@@ -237,9 +231,12 @@
       "foreignKey": "idReplaced"
     },
     "accepted": {
-      "type": "belongsTo",
-      "model": "nomenclature",
-      "foreignKey": "idAcceptedName"
+      "type": "hasMany",
+      "model": "synonyms",
+      "foreignKey": "idSynonym",
+      "scope": {
+        "include": "parent"
+      }
     },
     "genus-rel": {
       "type": "belongsTo",

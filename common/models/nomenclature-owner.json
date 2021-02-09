@@ -154,12 +154,6 @@
         "columnName": "owner_names"
       }
     },
-    "idAcceptedName": {
-      "type": "number",
-      "mysql": {
-        "columnName": "id_accepted_name"
-      }
-    },
     "idGenus": {
       "type": "number",
       "mysql": {
@@ -230,9 +224,12 @@
   "validations": [],
   "relations": {
     "accepted": {
-      "type": "belongsTo",
-      "model": "nomenclature",
-      "foreignKey": "idAcceptedName"
+      "type": "hasMany",
+      "model": "synonyms",
+      "foreignKey": "idSynonym",
+      "scope": {
+        "include": "parent"
+      }
     }
   },
   "acls": [
