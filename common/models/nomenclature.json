@@ -314,6 +314,48 @@
         "order": "rorder ASC"
       }
     },
+    "synonyms-other": {
+      "type": "hasMany",
+      "model": "synonyms",
+      "foreignKey": "idParent",
+      "scope": {
+        "include": [
+          "synonym"
+        ],
+        "where": {
+          "syntype": 0
+        },
+        "order": "rorder ASC"
+      }
+    },
+    "parental-combinations": {
+      "type": "hasMany",
+      "model": "synonyms",
+      "foreignKey": "idParent",
+      "scope": {
+        "include": [
+          "synonym"
+        ],
+        "where": {
+          "syntype": 9
+        },
+        "order": "rorder ASC"
+      }
+    },
+    "taxon-positions": {
+      "type": "hasMany",
+      "model": "synonyms",
+      "foreignKey": "idParent",
+      "scope": {
+        "include": [
+          "synonym"
+        ],
+        "where": {
+          "syntype": 5
+        },
+        "order": "rorder ASC"
+      }
+    },
     "synonyms-nomenclatoric-through": {
       "type": "hasMany",
       "model": "nomenclature",
