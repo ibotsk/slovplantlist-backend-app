@@ -166,6 +166,18 @@
         "columnName": "id_nomen_novum"
       }
     },
+    "idParentCombination": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_parent_combination"
+      }
+    },
+    "idTaxonPosition": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_taxon_position"
+      }
+    },
     "insertedBy": {
       "type": "string",
       "mysql": {
@@ -258,6 +270,16 @@
       "model": "nomenclature",
       "foreignKey": "idNomenNovum"
     },
+    "parent-combination": {
+      "type": "belongsTo",
+      "model": "nomenclature",
+      "foreignKey": "idParentCombination"
+    },
+    "taxon-position": {
+      "type": "belongsTo",
+      "model": "nomenclature",
+      "foreignKey": "idTaxonPosition"
+    },
     "synonyms-taxonomic": {
       "type": "hasMany",
       "model": "synonyms",
@@ -324,34 +346,6 @@
         ],
         "where": {
           "syntype": 0
-        },
-        "order": "rorder ASC"
-      }
-    },
-    "parental-combinations": {
-      "type": "hasMany",
-      "model": "synonyms",
-      "foreignKey": "idParent",
-      "scope": {
-        "include": [
-          "synonym"
-        ],
-        "where": {
-          "syntype": 9
-        },
-        "order": "rorder ASC"
-      }
-    },
-    "taxon-positions": {
-      "type": "hasMany",
-      "model": "synonyms",
-      "foreignKey": "idParent",
-      "scope": {
-        "include": [
-          "synonym"
-        ],
-        "where": {
-          "syntype": 5
         },
         "order": "rorder ASC"
       }

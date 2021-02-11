@@ -178,6 +178,18 @@
         "columnName": "id_nomen_novum"
       }
     },
+    "idParentCombination": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_parent_combination"
+      }
+    },
+    "idTaxonPosition": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_taxon_position"
+      }
+    },
     "insertedBy": {
       "type": "string",
       "mysql": {
