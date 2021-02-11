@@ -142,12 +142,6 @@
     "subaggregate": {
       "type": "string"
     },
-    "idAcceptedName": {
-      "type": "number",
-      "mysql": {
-        "columnName": "id_accepted_name"
-      }
-    },
     "idGenus": {
       "type": "number",
       "mysql": {
@@ -170,6 +164,18 @@
       "type": "number",
       "mysql": {
         "columnName": "id_nomen_novum"
+      }
+    },
+    "idParentCombination": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_parent_combination"
+      }
+    },
+    "idTaxonPosition": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_taxon_position"
       }
     },
     "insertedBy": {
@@ -236,10 +242,23 @@
       "model": "nomenclature",
       "foreignKey": "idReplaced"
     },
-    "accepted": {
-      "type": "belongsTo",
+    "taxon-position-for": {
+      "type": "hasMany",
       "model": "nomenclature",
-      "foreignKey": "idAcceptedName"
+      "foreignKey": "idTaxonPosition"
+    },
+    "parent-combination-for": {
+      "type": "hasMany",
+      "model": "nomenclature",
+      "foreignKey": "idParentCombination"
+    },
+    "accepted": {
+      "type": "hasMany",
+      "model": "synonyms",
+      "foreignKey": "idSynonym",
+      "scope": {
+        "include": "parent"
+      }
     },
     "genus-rel": {
       "type": "belongsTo",
@@ -260,6 +279,16 @@
       "type": "belongsTo",
       "model": "nomenclature",
       "foreignKey": "idNomenNovum"
+    },
+    "parent-combination": {
+      "type": "belongsTo",
+      "model": "nomenclature",
+      "foreignKey": "idParentCombination"
+    },
+    "taxon-position": {
+      "type": "belongsTo",
+      "model": "nomenclature",
+      "foreignKey": "idTaxonPosition"
     },
     "synonyms-taxonomic": {
       "type": "hasMany",
@@ -313,6 +342,20 @@
         ],
         "where": {
           "syntype": 4
+        },
+        "order": "rorder ASC"
+      }
+    },
+    "synonyms-other": {
+      "type": "hasMany",
+      "model": "synonyms",
+      "foreignKey": "idParent",
+      "scope": {
+        "include": [
+          "synonym"
+        ],
+        "where": {
+          "syntype": 0
         },
         "order": "rorder ASC"
       }

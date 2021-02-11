@@ -154,12 +154,6 @@
         "columnName": "owner_names"
       }
     },
-    "idAcceptedName": {
-      "type": "number",
-      "mysql": {
-        "columnName": "id_accepted_name"
-      }
-    },
     "idGenus": {
       "type": "number",
       "mysql": {
@@ -182,6 +176,18 @@
       "type": "number",
       "mysql": {
         "columnName": "id_nomen_novum"
+      }
+    },
+    "idParentCombination": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_parent_combination"
+      }
+    },
+    "idTaxonPosition": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_taxon_position"
       }
     },
     "insertedBy": {
@@ -230,9 +236,12 @@
   "validations": [],
   "relations": {
     "accepted": {
-      "type": "belongsTo",
-      "model": "nomenclature",
-      "foreignKey": "idAcceptedName"
+      "type": "hasMany",
+      "model": "synonyms",
+      "foreignKey": "idSynonym",
+      "scope": {
+        "include": "parent"
+      }
     }
   },
   "acls": [
