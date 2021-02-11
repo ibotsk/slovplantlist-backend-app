@@ -242,6 +242,16 @@
       "model": "nomenclature",
       "foreignKey": "idReplaced"
     },
+    "taxon-position-for": {
+      "type": "hasMany",
+      "model": "nomenclature",
+      "foreignKey": "idTaxonPosition"
+    },
+    "parent-combination-for": {
+      "type": "hasMany",
+      "model": "nomenclature",
+      "foreignKey": "idParentCombination"
+    },
     "accepted": {
       "type": "hasMany",
       "model": "synonyms",
