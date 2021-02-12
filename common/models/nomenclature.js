@@ -33,8 +33,18 @@ const checkHybrid = (instance) => {
 
 module.exports = function(Nomenclature) {
   Nomenclature.observe('before save', (ctx, next) => {
-    ctx.instance.ntypeOrder = ntypeOrderMap(ctx.instance.ntype);
-    ctx.instance.hybrid = checkHybrid(ctx.instance);
+    if (ctx.instance) { // create, update
+      ctx.instance.ntypeOrder = ntypeOrderMap(ctx.instance.ntype);
+      ctx.instance.hybrid = checkHybrid(ctx.instance);
+    }
+    if (ctx.currentInstance) { // patch
+      const instance = {
+        ...ctx.currentInstance,
+        ...ctx.data,
+      };
+      ctx.currentInstance.ntypeOrder = ntypeOrderMap(instance.ntype);
+      ctx.currentInstance.hybrid = checkHybrid(instance);
+    }
     next();
   });
 };
