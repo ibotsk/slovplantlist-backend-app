@@ -9,22 +9,25 @@
     }
   },
   "properties": {
-    "allochthonous": {
-      "type": "string"
-    },
-    "invasiveness": {
+    "origin": {
       "type": "string"
     },
     "cultivation": {
       "type": "string"
     },
-    "protection": {
+    "invasiveness": {
+      "type": "string"
+    },
+    "residence_time": {
       "type": "string"
     },
     "endemism": {
       "type": "string"
     },
-    "doubtfullness": {
+    "threat": {
+      "type": "string"
+    },
+    "protection": {
       "type": "string"
     }
   },
