@@ -18,8 +18,11 @@
     "invasiveness": {
       "type": "string"
     },
-    "residence_time": {
-      "type": "string"
+    "residenceTime": {
+      "type": "string",
+      "mysql": {
+        "columnName": "residence_time"
+      }
     },
     "endemism": {
       "type": "string"
@@ -27,8 +30,17 @@
     "threat": {
       "type": "string"
     },
-    "protection": {
-      "type": "string"
+    "protectionPrepared": {
+      "type": "string",
+      "mysql": {
+        "columnName": "protection_prepared"
+      }
+    },
+    "protectionCurrent": {
+      "type": "string",
+      "mysql": {
+        "columnName": "protection_current"
+      }
     }
   },
   "validations": [],
