@@ -18,6 +18,9 @@
     "invasiveness": {
       "type": "string"
     },
+    "residence_time": {
+      "type": "string"
+    },
     "residenceTime": {
       "type": "string",
       "mysql": {
@@ -28,6 +31,9 @@
       "type": "string"
     },
     "threat": {
+      "type": "string"
+    },
+    "protection": {
       "type": "string"
     },
     "protectionPrepared": {
