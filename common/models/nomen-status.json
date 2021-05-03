@@ -9,6 +9,12 @@
     }
   },
   "properties": {
+    "idNomenclature": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_nomenclature"
+      }
+    },
     "origin": {
       "type": "string"
     },
@@ -16,9 +22,6 @@
       "type": "string"
     },
     "invasiveness": {
-      "type": "string"
-    },
-    "residence_time": {
       "type": "string"
     },
     "residenceTime": {
@@ -31,9 +34,6 @@
       "type": "string"
     },
     "threat": {
-      "type": "string"
-    },
-    "protection": {
       "type": "string"
     },
     "protectionPrepared": {
