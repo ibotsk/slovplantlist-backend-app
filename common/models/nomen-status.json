@@ -9,23 +9,44 @@
     }
   },
   "properties": {
-    "allochthonous": {
-      "type": "string"
+    "idNomenclature": {
+      "type": "number",
+      "mysql": {
+        "columnName": "id_nomenclature"
+      }
     },
-    "invasiveness": {
+    "origin": {
       "type": "string"
     },
     "cultivation": {
       "type": "string"
     },
-    "protection": {
+    "invasiveness": {
       "type": "string"
+    },
+    "residenceTime": {
+      "type": "string",
+      "mysql": {
+        "columnName": "residence_time"
+      }
     },
     "endemism": {
       "type": "string"
     },
-    "doubtfullness": {
+    "threat": {
       "type": "string"
+    },
+    "protectionPrepared": {
+      "type": "string",
+      "mysql": {
+        "columnName": "protection_prepared"
+      }
+    },
+    "protectionCurrent": {
+      "type": "string",
+      "mysql": {
+        "columnName": "protection_current"
+      }
     }
   },
   "validations": [],
